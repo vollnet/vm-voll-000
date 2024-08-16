@@ -37,7 +37,7 @@
 	      #
 	      # Sync App Folder
 	      #
-	      app_config.vm.synced_folder "./sync_folder_host", "/home/vagrant/sync_folder_work", create: true
+	      app_config.vm.synced_folder settings['sync_host'], settings['sync_work'], create: true
 	 
 	      # define hostname: developer / operator / tester / release / product / ...
 	      #
@@ -48,7 +48,7 @@
 		#
 		# define tamanho da memória RAM da VM
 		#
-		ap.customize ["modifyvm", :id, "--memory", "1024", "--cpus", "2"]
+		ap.customize ["modifyvm", :id, "--memory", settings['vm_memory'], "--cpus", settings['vm_cpus']]
 		#
 		# Projeto: nome da vm-vagrant
 		#

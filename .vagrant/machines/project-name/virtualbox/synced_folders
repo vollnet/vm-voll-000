@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/sync_folder_work":{"create":true,"guestpath":"/home/vagrant/sync_folder_work","hostpath":"/home/developer/vms-vagrant/vm-voll-000/sync_folder_host","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/developer/vms-vagrant/vm-voll-000","disabled":false,"__vagrantfile":true}}}
