@@ -33,6 +33,6 @@ vm_name:        "vm-voll-000"
 project:        "project-name"
 #
 # VBox Provisioning 
-ansible_path:   "/home/developer/vms-vagrant/vm-voll-101/provision/tasks/main.yml"
+ansible_path:   "/home/developer/vms-vagrant/vm-voll-000/provision/tasks/main.yml"
 #
 ...

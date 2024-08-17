@@ -42,6 +42,12 @@
 # Stage-0 Update/Upgrade & Configurations   <<<<<<<<<<<<<<<<<<<<<<
 #
 
+#
+#    - NodeJS && Nodemon
+#    - Docker && docker-compose
+#    - Portainer
+#    - TypeScript 
+#   
 ---
 
 - hosts: all
@@ -156,7 +162,34 @@
         - unzip
       become: true
 
+#
+# Stage-3 Node.JS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#
+    # Veja: https://geekflare.com/nodejs-monitoring-tools/
 
+    - name: NodeSource package key
+      apt_key:
+        state: present
+        url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+      become: yes
+
+    - name: NodeSource Repository 
+      shell: 'curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -'
+      become: yes
+
+    - name: Install NodeJS
+      apt:
+        state: present
+        name: nodejs
+      become: yes
+
+    - name: Install nodemon
+      npm:
+        name: nodemon
+        global: yes
+        state: present
+      become: yes
+      
 #
 # Stage-11 Finishing          <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 #                           
