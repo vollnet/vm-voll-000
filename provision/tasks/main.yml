@@ -123,6 +123,12 @@
       apt: upgrade=dist
       become: yes
 
+    - name: Install Python
+      package:
+        name: python
+        state: present
+      become: yes
+  
     - name: Install dependencies
       apt:
         name: "{{ packages }}"
@@ -256,7 +262,7 @@
     - name: Add remote "<user-vmbox>" to "docker" group
       user:
         name: "vagrant"
-        group: "docker"
+        groups: "docker"
         append: yes
       tags:
         - docker
@@ -298,7 +304,7 @@
 
 
 #
-# Stage-11 Finishing          <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# Stage-99 Finishing          <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 #                           
     - name: Remove old packages
       apt:
