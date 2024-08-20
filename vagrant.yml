@@ -1,13 +1,13 @@
 ---
 # 
-#               [  vm-voll-101 a vm-voll-199  ] [Vollnet Based Devops]
+#               [  vm-voll-101 a vm-voll-199  ] vm-voll-000 Based Devops]
 #
-# VBox Fixed IP [10.10.125.101 a 10.10.125.199] [10.10.125.200] 
-#               [192.168.0.101 a 192.168.0.199] [192.168.0.200]
+# VBox Fixed IP [10.10.125.101 a 10.10.125.199] [10.10.125.99] 
+#               [192.168.0.101 a 192.168.0.199] [192.168.0.99]
 #
-ip_address:     192.168.0.200
+ip_address:     192.168.0.99
 #
-# VBox SO
+# VBox SO Linux Distro
 type_vbox:      "ubuntu/focal64"
 #
 # sync folders

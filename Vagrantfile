@@ -28,7 +28,7 @@
 		#config.vm.define :voll do |app_config|
 	    config.vm.define settings['project'] do |app_config|
 	      #
-	      # vm-vagrant distro: Official Ubuntu 20.04 LTS
+	      # vm-vagrant distro
 	      app_config.vm.box = settings['type_vbox']
 
 	      # vm-vagrant vbox upadate
@@ -60,6 +60,7 @@
 	      app_config.vm.provision :shell, inline: "echo Provisionamento da vbox"
 	      #
 	      app_config.vm.provision "ansible" do |ansible|
+			ansible.compatibility_mode = "1.8"
 	        ansible.playbook =   settings['ansible_path']  
 	        ansible.verbose = "v"
 	      end
