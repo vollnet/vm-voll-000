@@ -62,9 +62,13 @@
     * Plataforms:
 
         - Javascript/TypeScript/NodeJS: NextJS/NestJS
+
         - Python && Django/Flask
+
         - Golang
+
         - Flutter/Dart
+
 
     * Docker && Docker Hub
        
