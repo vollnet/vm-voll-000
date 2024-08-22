@@ -15,42 +15,18 @@
 
 ## HOST (VM && Bare Metal) 
 
-### Resouces
+    Each VM-VOLL-XX is dedicated to ONLY ONE project. Then, the GitHub account will have a copy of the environment provisioning as well as the project code.
+
+
+### Primary Resouces
 
     - SO Windows/Linux 
     - Hypervisors: Hyper-V, Virtualbox, VMware/ESXi
     - Chrome
     - VSCode
-
-        * Extensions (See document in the Google Drive)
-
-            > Portuguese (Brazil) Language for VSCode - by MS
-            > GitLens - by GitKraken
-            > Git History - by Don Jayamanne
-            > Peacock for workspace color - by John Papa
-            > Ansible - by Red Hat
-            > Vagrant - by Baptist Benoist 
-            > Javascript and TypeScript Nughtly - by MS
-            > ES7+React/Redux/react-Native snippets - by dsznajder
-            > Docker - by MS
-            > Better Comments - by Aaron Bond
-            > Bookmarks - by Alessandro Fragnani
-            > Code Runner - by Jun Han
-            > Console Ninja - by Wallaby.js
-            > CMake - by twxs
-            > CMake Tools - by MS
-            > Doxygen Documentation Generator 
-            > Dracula - by Dracula Theme
-            > Live Server - by Ritwick Dey
-            > YAML - by Red Hat
-            > SQLite Viewer - by Florian Klampfer
-            > Regex Snippets - by Monish Basaniwal
-            > Prettier-Code Formatter - by Prettier
-            > Material Icon Theme - by Philipp Kief
-
     - Virtualbox 7.0
-    - Vagrant 2.4.1 && Plugin VBGuest
-    - Ansible (PPA)
+    - Vagrant 2.4.1 or later && Plugin VBGuest
+    - Ansible (via PPA)
     - Git/GitHub/GitHub Actions
     - Provider Back4App
 
@@ -61,25 +37,53 @@
 
     * Plataforms:
 
-        - Javascript/TypeScript/NodeJS: NextJS/NestJS
 
-        - Python && Django/Flask
+        - [01] Javascript/TypeScript/NodeJS: NextJS/NestJS
 
-        - Golang
+            [01A] Javascript/TypeScript
 
-        - Flutter/Dart
+            [01B] NodeJS
+
+            [01C] NextJS/NestJS
 
 
-    * Docker && Docker Hub
+        - [02] Python && Django/Flask
+
+            [02A] Python
+
+            [02B] Django/Flask
+
+
+        - [03] Golang
+
+            [03A] Golang
+
+
+        - [04] Flutter/Dart
+
+            [04A] Dart 
+
+            [04B] Flutter
        
 
 ## Installation 
 
 
+
+
 ## Operational 
 
 
-## Observability
+
+## Location
+
+    Device ......:
+
+    SO ..........:
+
+    Hypervisor ..:
+
+    VM-Host .....:
 
 
 ## Maintenance
@@ -89,5 +93,6 @@
 
 
 ## FAQ
+
 
 ## Learnings
