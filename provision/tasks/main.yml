@@ -170,7 +170,7 @@
 
 
 #
-# Stage-3 Basic Install   <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# Stage-3 Python Install   <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 #
 
     - name: Install Python 2.7
@@ -239,7 +239,7 @@
       become: true
 
 #
-# Stage-4 Node.JS   <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+# Stage-4 Node.JS && NPM  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 #
     # Veja: https://geekflare.com/nodejs-monitoring-tools/
 
@@ -265,6 +265,22 @@
         global: yes
         state: present
       become: yes
+
+    #
+    # TypeScript Install
+    #
+
+    - name: Install TypeScript
+      npm:
+        name: "typescript"
+        global: yes
+        state: present
+      become: yes
+
+    #
+    # Check versiom
+    #
+    # $ tsc -v
 
 #
 # Stage-5 Docker & docker-compose Install   <<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -338,6 +354,41 @@
         - docker
       become: yes
  
+    #
+    # Docker Portainer - Vs 2.20.X for Docker Vs 26.X.Y and up
+    #                    Vs 2.20.3 and up with support for MicroK8S 1.30 
+    #
+    # see: https://docs.portainer.io/start/install-ce/server/docker/linux
+    
+    - name: Creating the VOLUME for Portainer
+      command: docker volume create portainer_data
+      register: is_installed
+      failed_when: no
+      changed_when: no
+      become: yes      
+     
+    - name: create the Portainer container
+      command: docker run -d -p 8000:8000 -p 9000:9000 --name portainer \
+               --restart=always \
+               -v /var/run/docker.sock:/var/run/docker.sock \
+               -v portainer_data:/data \
+               portainer/portainer-ce:latest
+      register: is_installed
+      failed_when: no
+      changed_when: no
+      become: yes
+
+    # Access container Portainer Server
+    #
+    # User: admin
+    # Pw:   Portainer#20@ (Change pw after first login)
+    #
+    # Acess: <Ip-VM_Work>:9000
+
+#
+# Stage-6 Vagrant user configuration   <<<<<<<<<<<<<<<<<<<<<<<<<<<
+#
+
     - name: Set PasswordAuthentication for the VM-Vagrant
       lineinfile: dest=/etc/ssh/sshd_config regexp='^#?PasswordAuthentication' line='PasswordAuthentication yes'
       become: yes
