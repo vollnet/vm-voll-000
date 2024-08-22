@@ -22,7 +22,7 @@
 
 # Vagrant
 #
-.vagrant/*
+.vagrant/
 
 # Log files
 *.log
