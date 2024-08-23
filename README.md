@@ -5,6 +5,7 @@
 
 ## General Information
 
+
     - DEVOPS Location    :
     - Project Name       :
     - Plataform Type     :
@@ -13,12 +14,11 @@
     - Release Date       : MM/DD/YYYY
 
 
-## HOST (VM && Bare Metal) 
+
+## Host Resources (VM && Bare Metal) 
+
 
     Each VM-VOLL-XX is dedicated to ONLY ONE project. Then, the GitHub account will have a copy of the environment provisioning as well as the project code.
-
-
-### Primary Resouces
 
     - SO Windows/Linux 
     - Hypervisors: Hyper-V, Virtualbox, VMware/ESXi
@@ -28,12 +28,13 @@
     - Vagrant 2.4.1 or later && Plugin VBGuest
     - Ansible (via PPA)
     - Git/GitHub/GitHub Actions
+    - Docker Hub 
     - Provider Back4App
 
 
-## VM VBox 
 
-### Requirements 
+## VM-Work - Virtualbox (VBox) 
+
 
     * Plataforms:
 
@@ -66,12 +67,25 @@
             [04B] Flutter
        
 
-## Installation 
+        - [05] Blockchain
+
+            [05A] Blockchain WebApp/Mobile System
+
+            [05B] Blockchain IoT System
 
 
+        - [06] IoT
+
+            [06A] ESP32 
+
+            [06B] Arduíno
 
 
-## Operational 
+        - [07] Database
+
+            [07A] DB-SaaS Model
+
+            [07B] DB-SaaS BI
 
 
 
@@ -86,13 +100,4 @@
     VM-Host .....:
 
 
-## Maintenance
 
-
-## Troubleshooting
-
-
-## FAQ
-
-
-## Learnings

@@ -43,5 +43,6 @@ key*
 
 links*
 
-sync_folder_host/*
+sync_folder_host/project-01/my-app/node_modules
+
 
