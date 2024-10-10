@@ -9,7 +9,7 @@
 ip_address:     192.168.0.99
 #
 # VBox SO Linux Distro
-type_vbox:      "ubuntu/focal64"
+type_vbox:      "bento/ubuntu-22.04"
 #
 # sync folders
 #
@@ -22,7 +22,7 @@ name_bridge:    "eth0" # LAN: "ens33", "ens160", "eth0"| Wi-Fi: "wlo1"
 #
 vm_memory:      "2048"
 #
-vm_cpus:        "2"
+vm_cpus:        "1"
 #
 # Vbox User Name: developer, tester, operation, support, architect, business, management, ... , others
 vm_hostname:    "developer"
@@ -31,7 +31,7 @@ vm_hostname:    "developer"
 vm_name:        "vm-voll-000"
 #
 # VBox Virtual Name
-project:        "project-name"
+project:        "project-voll-000"
 #
 # VBox Provisioning 
 ansible_path:   "/home/developer/vms-vagrant/vm-voll-000/provision/tasks/main.yml"
